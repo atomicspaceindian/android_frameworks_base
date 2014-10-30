@@ -399,12 +399,12 @@ public class NetworkController extends BroadcastReceiver implements DemoMode {
 	} else if (action.equals(Intent.ACTION_BOOT_COMPLETED)) {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
-                public void run() {	506
+                public void run() {	
                     // Delay wifi connection notifications by at least 30 seconds immediately after boot
                     mConnectionAtBoot = false;
             }}, 30000);
-        } else if (action.equals("cm.UPDATE_WIFI_NOTIFICATION_PREFERENCE")) {	510
-            mWifiNotifications = Settings.System.getInt(mContext.getContentResolver(),	511
+        } else if (action.equals("cm.UPDATE_WIFI_NOTIFICATION_PREFERENCE")) {
+            mWifiNotifications = Settings.System.getInt(mContext.getContentResolver(),
                     Settings.System.WIFI_NETWORK_NOTIFICATIONS, 0);
         } else if (action.equals(Intent.ACTION_CONFIGURATION_CHANGED)) {
             refreshLocale();
