@@ -883,7 +883,7 @@ public class NetworkController extends BroadcastReceiver implements DemoMode {
                 }
                 if (info != null) {
                     mWifiSsid = huntForSsid(mWifiManager, info);
-			 if (mWifiNotifications > 0) {	1064
+			 if (mWifiNotifications > 0) {
                         boolean restoredConnection = mConnectionsList.contains(mWifiSsid);
                         if (!mConnectionAtBoot && (mWifiSsid != oldWifiSsid)) {
                             String contentText = mContext.getString(R.string.wifi_status_changed);
