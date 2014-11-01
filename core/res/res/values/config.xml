@@ -1326,4 +1326,7 @@
     -->
     <bool name="config_proximityCheckOnWake">false</bool>
     <integer name="config_proximityCheckTimeout">250</integer>
+    
+    <!-- number of saved networks | can be increased with an overlay for wifi only devices -->	115
+	<integer name="wifi_notifications_remembered_connections">8</integer>
 </resources>
