@@ -907,7 +907,8 @@ public class NetworkController extends BroadcastReceiver implements DemoMode {
                                             .setContentIntent(contentIntent)
                                             .setAutoCancel(true);
                                     if (mWifiNotifications == 3) {
-                                        network.defaults|= Notification.DEFAULT_SOUND;
+                                        Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                                        network.setSound(soundUri);
                                     }
                                     nm.cancel(R.string.wifi_address_changed);
                                     nm.notify(R.string.wifi_address_changed, network.build());
